@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Open Tetris</title>
+
+		<!-- Node.js Compatability Resolution -->
+		<script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="./scripts/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="./scripts/jquery-ui-1.12.1.smoothness/jquery-ui.js"></script>
+		<link rel="stylesheet" href="./scripts/jquery-ui-1.12.1.smoothness/jquery-ui.css" />
+
+		<!-- Node.js Compatability Resolution -->
+		<script>if (window.module) { module = window.module; }</script>
+
+		<!-- Custom CSS -->
+		<style>/* Layout CSS */
+			html { overflow: hidden; }
+			html, body {
+				position: relative;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			body > section {
+				height: 100%;
+				display: inline-block;
+			}
+		</style>
+		<link rel="stylesheet" href="./chat.css" />
+		<style>/* Window Colors CSS */
+		</style>
+		<style>/* Tetremino Theme CSS */
+		</style>
+
+		<!-- Custom JS -->
+		<script type="text/javascript" src="./helpers.js"></script>
+		<script type="text/javascript" src="./chat.js"></script>
+	</head>
+	<body>
+		<section id="chat">
+			<div class="resize-fix">
+				<h1>Room</h1>
+				<div id="participants">
+					<div class="resize-fix">
+						
+					</div>
+				<!-- No Whitespace may exist between this closing div tag and the next opening div tag -->
+				<!-- http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-elements-dont-stack -->
+				</div><div id="conversation">
+					<div id="messages">
+						<div class="resize-fix">
+							<div id="mbox">
+								<div class="scrollfix">
+									<div id="mqueue"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="chatbox">
+						<div class="resize-fix">
+							<div id="chatarea">
+								<textarea></textarea>
+								<button>Send</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- No Whitespace may exist between this closing tag and the next opening tag -->
+		<!-- http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-elements-dont-stack -->
+		</section><section id="game">
+			<div id="self"></div>
+			<div id="peers"></div>
+		</section>
+	</body>
+</html>
